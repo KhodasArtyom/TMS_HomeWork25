@@ -4,7 +4,7 @@ import java.time.Year;
 
 public abstract class Show {
     protected String name;
-    protected Year yearOfIssue;
+    protected int yearOfIssue;
 
     protected String countryOfIssue;
 
@@ -16,7 +16,7 @@ public abstract class Show {
     private final int MAX_RATING = 10;
     private final int MIN_RATING = 0;
 
-    public Show(String name, Year yearOfIssue, String countryOfIssue, Double rating,
+    public Show(String name, int yearOfIssue, String countryOfIssue, Double rating,
                 int numberOfEstimates) {
         this.name = name;
         this.yearOfIssue = yearOfIssue;
@@ -39,7 +39,7 @@ public abstract class Show {
         return name;
     }
 
-    public Year getYearOfIssue() {
+    public int getYearOfIssue() {
         return yearOfIssue;
     }
 
