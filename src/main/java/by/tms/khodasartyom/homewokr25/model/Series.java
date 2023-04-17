@@ -24,7 +24,15 @@ public class Series extends Show {
 
     @Override
     public String toString() {
-        String output = String.format()
+        String output = String.format("[Сериал] %-40s  %s–%s  %s  %2ss  %3se  %.1f  %7s",
+                name,
+                yearOfIssue,
+                yearIssueFinalEpisode,
+                countryOfIssue,
+                numberOfEpisodes,
+                numberOfSeries,
+                rating,
+                numberOfEstimates);
         return output;
     }
 
