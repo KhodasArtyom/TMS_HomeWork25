@@ -1,7 +1,9 @@
 package by.tms.khodasartyom.homewokr25.model;
 
+import java.time.Year;
+
 public class Film extends Show {
-    public Film(String name, int yearOfIssue, String countryOfIssue, double rating, int numberOfEstimates) {
+    public Film(String name, Year yearOfIssue, String countryOfIssue, double rating, int numberOfEstimates) {
         super(name, yearOfIssue, countryOfIssue, rating, numberOfEstimates);
     }
 

@@ -1,10 +1,11 @@
 package by.tms.khodasartyom.homewokr25.model;
 
 import java.sql.Date;
+import java.time.Year;
 
 public abstract class Show {
     protected String name;
-    protected int yearOfIssue;
+    protected Year yearOfIssue;
 
     protected String countryOfIssue;
 
@@ -16,7 +17,7 @@ public abstract class Show {
     private final int MAX_RATING = 10;
     private final int MIN_RATING = 0;
 
-    public Show(String name, int yearOfIssue, String countryOfIssue, double rating,
+    public Show(String name,Year yearOfIssue, String countryOfIssue, double rating,
                 int numberOfEstimates) {
         this.name = name;
         this.yearOfIssue = yearOfIssue;
@@ -39,7 +40,7 @@ public abstract class Show {
         return name;
     }
 
-    public int getYearOfIssue() {
+    public Year getYearOfIssue() {
         return yearOfIssue;
     }
 

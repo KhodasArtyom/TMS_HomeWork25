@@ -36,12 +36,12 @@ public class Series extends Show {
     }
 
     public Series(String name,
-                  int yearOfIssue,
-                  String countryOfIssue,
-                  double rating,
+                  Year yearOfIssue,
+                  Year countryOfIssue,
+                  String rating,
                   int numberOfEstimates,
-                  Year yearIssueFinalEpisode,
-                  int numberOfEpisodes,
+                  int yearIssueFinalEpisode,
+                  double numberOfEpisodes,
                   int numberOfSeries) {
         super(name, yearOfIssue, countryOfIssue, rating, numberOfEstimates);
         this.yearIssueFinalEpisode = yearIssueFinalEpisode;
