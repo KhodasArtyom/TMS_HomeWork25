@@ -1,39 +1,56 @@
 package by.tms.khodasartyom.homewokr25.model;
 
-public class Series extends Show{
+import java.time.Year;
 
-    private int yearIssueFinalEpisode;
-    private int numberOfEpisodes;
+public class Series extends Show {
 
-    private int numberOfSeries;
+    private final Year yearIssueFinalEpisode;
+    private final int numberOfEpisodes;
 
-    public Series(String name, int yearOfIssue, String countryOfIssue, double rating, int numberOfEstimates) {
-        super(name, yearOfIssue, countryOfIssue, rating, numberOfEstimates);
+    private final int numberOfSeries;
+
+
+    @Override
+    public String toString() {
+        String output = String.format("[Сериал] %-40s  %s–%s  %s  %2ss  %3se  %.1f  %7s",
+                name,
+                yearOfIssue,
+                yearIssueFinalEpisode,
+                countryOfIssue,
+                numberOfEpisodes,
+                numberOfSeries);
+
+        return output;
     }
 
-    public int getYearIssueFinalEpisode() {
+    public Year getYearIssueFinalEpisode() {
         return yearIssueFinalEpisode;
-    }
-
-    public void setYearIssueFinalEpisode(int yearIssueFinalEpisode) {
-        this.yearIssueFinalEpisode = yearIssueFinalEpisode;
     }
 
     public int getNumberOfEpisodes() {
         return numberOfEpisodes;
     }
 
-    public void setNumberOfEpisodes(int numberOfEpisodes) {
-        this.numberOfEpisodes = numberOfEpisodes;
-    }
-
     public int getNumberOfSeries() {
         return numberOfSeries;
     }
 
-    public void setNumberOfSeries(int numberOfSeries) {
+    public Series(String name,
+                  int yearOfIssue,
+                  String countryOfIssue,
+                  double rating,
+                  int numberOfEstimates,
+                  Year yearIssueFinalEpisode,
+                  int numberOfEpisodes,
+                  int numberOfSeries) {
+        super(name, yearOfIssue, countryOfIssue, rating, numberOfEstimates);
+        this.yearIssueFinalEpisode = yearIssueFinalEpisode;
+        this.numberOfEpisodes = numberOfEpisodes;
         this.numberOfSeries = numberOfSeries;
+        if (numberOfEpisodes < 0 || numberOfSeries < 0) {
+            throw new IllegalArgumentException("There is can't be negative ");
+        }
+
+
     }
-
-
 }
