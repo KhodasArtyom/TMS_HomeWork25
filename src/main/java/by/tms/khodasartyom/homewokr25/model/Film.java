@@ -7,7 +7,7 @@ public class Film extends Show {
 
     @Override
     public String toString() {
-        String output = String.format("[Film] : %-35s %-9s %s            %.1f %7ss ",
+        String output = String.format("[Film] : %-35s %-9s %s            %.1f %7ss . ",
                 name,
                 yearOfIssue,
                 countryOfIssue,
