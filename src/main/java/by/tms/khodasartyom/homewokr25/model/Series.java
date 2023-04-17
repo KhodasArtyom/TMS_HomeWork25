@@ -10,19 +10,6 @@ public class Series extends Show {
     private final int numberOfSeries;
 
 
-    @Override
-    public String toString() {
-        String output = String.format("[Сериал] %-40s  %s–%s  %s  %2ss  %3se  %.1f  %7s",
-                name,
-                yearOfIssue,
-                yearIssueFinalEpisode,
-                countryOfIssue,
-                numberOfEpisodes,
-                numberOfSeries);
-
-        return output;
-    }
-
     public Year getYearIssueFinalEpisode() {
         return yearIssueFinalEpisode;
     }
@@ -35,14 +22,20 @@ public class Series extends Show {
         return numberOfSeries;
     }
 
+    @Override
+    public String toString() {
+        String output = String.format()
+        return output;
+    }
+
     public Series(String name,
                   Year yearOfIssue,
-                  Year countryOfIssue,
-                  String rating,
-                  int numberOfEstimates,
-                  int yearIssueFinalEpisode,
-                  double numberOfEpisodes,
-                  int numberOfSeries) {
+                  Year yearIssueFinalEpisode,
+                  String countryOfIssue,
+                  int numberOfEpisodes,
+                  int numberOfSeries,
+                  Double rating,
+                  int numberOfEstimates) {
         super(name, yearOfIssue, countryOfIssue, rating, numberOfEstimates);
         this.yearIssueFinalEpisode = yearIssueFinalEpisode;
         this.numberOfEpisodes = numberOfEpisodes;
