@@ -3,6 +3,9 @@ package by.tms.khodasartyom.homewokr25.model;
 import java.time.Year;
 
 public abstract class Show {
+    private static final int CODE_COUNTRY = 2;
+    private static final int MAX_RATING = 10;
+    private static final int MIN_RATING = 0;
     protected String name;
     protected int yearOfIssue;
 
@@ -12,9 +15,6 @@ public abstract class Show {
 
     protected int numberOfEstimates;
 
-    private final int CODE_COUNTRY = 2;
-    private final int MAX_RATING = 10;
-    private final int MIN_RATING = 0;
 
     public Show(String name, int yearOfIssue, String countryOfIssue, Double rating,
                 int numberOfEstimates) {

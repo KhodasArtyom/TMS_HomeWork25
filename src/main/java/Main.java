@@ -7,9 +7,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         ShowRepository showRepository = new ShowRepository();
-        List<Show> showList = new ArrayList<>();
-        showList = showRepository.getAllShows();
-        for(Show show : showList) {
+        List<Show> showList = showRepository.getAllShows();
+
+        for (Show show : showList) {
             System.out.println(show.toString());
         }
 
