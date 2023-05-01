@@ -6,14 +6,14 @@ import java.util.function.Predicate;
 
 public class ByCountryOfIssuePredicate implements Predicate<Show> {
 
-    private final String countrySymols;
+    private final String countrySymbols;
 
     public ByCountryOfIssuePredicate(String countrySymols) {
-        this.countrySymols = countrySymols;
+        this.countrySymbols = countrySymols;
     }
 
     @Override
     public boolean test(Show show) {
-        return show.getCountryOfIssue().equals(countrySymols);
+        return show.getCountryOfIssue().equals(countrySymbols);
     }
 }

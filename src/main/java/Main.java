@@ -60,8 +60,8 @@ public class Main {
         List<Predicate<Show>> filters = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Filtering by:\n" +
-                "CountryOfIssue\n" +
-                "ByYearOFIssue\n" +
+                "countryOfIssue\n" +
+                "byYearOFIssue\n" +
                 "end");
         while (true) {
             String request = scanner.nextLine();
@@ -69,8 +69,8 @@ public class Main {
 
             if (parts[0].equals("end")) return filters;
             Predicate<Show> filter = switch (parts[0]) {
-                case "byCountry" -> new ByCountryOfIssuePredicate(parts[1]);
-                case "byYearOfIssue" -> new ByYearOfIssuePredicate(Integer.parseInt(parts[2]));
+                case "byCountry" -> new ByCountryOfIssuePredicate(parts[0]);
+                case "byYearOfIssue" -> new ByYearOfIssuePredicate(Integer.parseInt(parts[0]));
                 default -> throw new IllegalStateException("Unexpected value: " + parts[0]);
             };
             filters.add(filter);
