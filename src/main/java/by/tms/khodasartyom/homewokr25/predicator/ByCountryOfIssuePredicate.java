@@ -8,8 +8,10 @@ public class ByCountryOfIssuePredicate implements Predicate<Show> {
 
     private final String countrySymbols;
 
-    public ByCountryOfIssuePredicate(String countrySymols) {
-        this.countrySymbols = countrySymols;
+    public ByCountryOfIssuePredicate(String countrySymbols) {
+
+
+        this.countrySymbols = countrySymbols;
     }
 
     @Override

@@ -2,6 +2,7 @@ package by.tms.khodasartyom.homewokr25.service;
 
 import by.tms.khodasartyom.homewokr25.model.Show;
 import by.tms.khodasartyom.homewokr25.repository.AllShowsRepository;
+import by.tms.khodasartyom.homewokr25.repository.ShowRepository;
 
 import java.util.Comparator;
 import java.util.Iterator;
@@ -16,7 +17,7 @@ private final AllShowsRepository repo;
     }
 
     @Override
-    public List<Show> request(List<Comparator<Show>> sorting, List<Predicate<Show>> filters) {
+    public List<Show> request(List<Predicate<Show>> filters,List<Comparator<Show>> sorting) {
         List<Show> allShows = repo.getAllShows();
         useSorting(allShows,sorting);
         useFilters(allShows,filters);
@@ -24,7 +25,7 @@ private final AllShowsRepository repo;
     }
 
 
-    public void useSorting(List<Show> list, List<Comparator<Show>> sorting) {
+    private  void useSorting(List<Show> list, List<Comparator<Show>> sorting) {
         if (!sorting.isEmpty()) {
             Iterator<Comparator<Show>> iterator = sorting.iterator();
             Comparator<Show> resultSorting = iterator.next();

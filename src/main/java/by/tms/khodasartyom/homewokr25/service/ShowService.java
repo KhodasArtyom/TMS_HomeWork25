@@ -8,6 +8,6 @@ import java.util.function.Predicate;
 
 public interface ShowService {
 
-List<Show> request(List<Comparator<Show>> sorting, List<Predicate<Show>> filters);
+    List<Show> request(List<Predicate<Show>> filters, List<Comparator<Show>> sorting);
 
 }
