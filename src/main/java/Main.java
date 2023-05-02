@@ -12,10 +12,11 @@ import java.util.*;
 import java.util.function.Predicate;
 
 public class Main {
-
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(Main.class);
 
 
     public static void main(String[] args) {
+    log.info("The program is starting...");
         AllShowsRepository showRepository = new ShowRepository();
         ShowServiceImpl service = new ShowServiceImpl(showRepository);
 
@@ -28,6 +29,7 @@ public class Main {
             for (Show show : shows) {
                 System.out.println(show.toString());
             }
+            log.info("The program has finished.");
         }
 
 
